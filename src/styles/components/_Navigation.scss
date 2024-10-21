@@ -1,0 +1,92 @@
+@import "/src/styles/settings";
+
+.navbar {
+  width: 100%;
+  background-color: var(--background-color);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+
+  &.scrolled {
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 1rem;
+
+      img {
+        width: 2rem;
+        height: auto;
+        display: block;
+      }
+    }
+
+    li {
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: var(--primary-color);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+
+      &.donation-link {
+        display: flex;
+        align-items: center;
+
+        .fa-bitcoin {
+          margin: 0 0.5rem;
+          vertical-align: middle;
+          font-size: 1.5rem;
+          color: rgb(247, 147, 26);
+        }
+      }
+    }
+  }
+
+  .nav-right {
+    li {
+      a {
+        font-size: 1.5rem;
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    .nav-left,
+    .nav-right {
+      li:not(.logo):not(:nth-child(-n + 4)) {
+        display: none;
+      }
+    }
+  }
+}

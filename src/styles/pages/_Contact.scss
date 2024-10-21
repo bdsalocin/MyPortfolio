@@ -1,0 +1,66 @@
+@import "/src/styles/settings";
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+
+  .contact-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .contact-content {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+    }
+
+    .messaging-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      a {
+        color: var(--secondary-color);
+        transition: color 0.3s, transform 0.3s;
+        font-size: 2.5rem;
+
+        &:hover {
+          color: var(--accent-color);
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    .contact-page {
+      padding: 1rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .messaging-icons {
+        gap: 1.5rem;
+
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-color-light);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    color: var(--text-color);
+  }
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

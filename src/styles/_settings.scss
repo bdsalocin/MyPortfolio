@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #ffffff;
+  --primary-color-dark: #f0f0f0;
+  --secondary-color: #6e37f5;
+  --secondary-color-dark: #5a30b0;
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --accent-color: #00d08c;
+  --accent-color-dark: #00b56e;
+}
+
+$primary-color: var(--primary-color);
+$primary-color-dark: var(--primary-color-dark);
+$secondary-color: var(--secondary-color);
+$secondary-color-dark: var(--secondary-color-dark);
+$background-color: var(--background-color);
+$text-color: var(--text-color);
+$accent-color: var(--accent-color);
+$accent-color-dark: var(--accent-color-dark);
+
+.dark-mode {
+  --background-color: #1a1a1a; /* Noir profond pour un look sombre et élégant */
+  --text-color: #ffffff; /* Blanc pur pour un contraste maximal */
+  --primary-color: #242424; /* Gris foncé pour garder un effet minimaliste */
+  --secondary-color: #6e37f5; /* Violet vif pour le texte principal */
+  --accent-color: #00d08c; /* Vert émeraude pour dynamiser le mode sombre */
+  --card-background: #2b2b2b; /* Gris très foncé pour les cartes et sections */
+  --highlight-color: #8f5de5; /* Une nuance plus claire de violet pour le surlignage */
+}
