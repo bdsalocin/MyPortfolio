@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import profilePicture from "../assets/img/profilPicture.jpg";
 import finityOneLogo from "../assets/img/finityOne-logo.png";
 import oneFinityExplorerLogo from "../assets/img/One Explorer.png";
@@ -13,14 +14,14 @@ const projectsData = [
     title: "FinityOne NFT",
     description: "Une plateforme NFT en construction",
     image: finityOneLogo,
-    githubLink: "https://github.com/bdsalocin/finityone-nft",
+    liveLink: "https://finityone-nft.vercel.app",
   },
   {
     id: 2,
     title: "OneFinity Explorer",
     description: "Un explorateur sous la blockchain OneFinity",
     image: oneFinityExplorerLogo,
-    githubLink: "https://github.com/bdsalocin/OneFinity-Explorer",
+    liveLink: "https://one-finity-explorer.vercel.app",
   },
 ];
 
@@ -102,11 +103,12 @@ const Home: React.FC = () => {
                 <p>{project.description}</p>
                 <div className="project-links">
                   <a
-                    href={project.githubLink}
+                    href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visiter le site de ${project.title}`}
                   >
-                    Voir sur GitHub
+                    <ExternalLink size={24} />
                   </a>
                 </div>
               </div>
