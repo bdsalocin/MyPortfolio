@@ -6,7 +6,6 @@ import profilePicture from "../assets/img/profilPicture.jpg";
 import finityOneLogo from "../assets/img/finityOne-logo.png";
 import oneFinityExplorerLogo from "../assets/img/One Explorer.png";
 import "../styles/pages/_Home.scss";
-import "../components/Testimonials";
 
 const projectsData = [
   {
@@ -52,8 +51,7 @@ const Home: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          Développeur web passionné, créant des expériences numériques
-          innovantes.
+          Développeur web, créant des expériences numériques innovantes.
         </motion.p>
       </motion.section>
 

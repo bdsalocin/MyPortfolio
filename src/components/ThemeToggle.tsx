@@ -3,7 +3,7 @@ import { Moon, Sun } from "lucide-react";
 import "../styles/components/_ThemeToggle.scss";
 
 interface ThemeToggleProps {
-  onThemeChange: (isDarkMode: boolean) => void; // Prop pour transmettre l'état du thème au parent
+  onThemeChange: (isDarkMode: boolean) => void;
 }
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({ onThemeChange }) => {
@@ -16,7 +16,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ onThemeChange }) => {
       document.body.classList.add("dark-mode");
     }
 
-    // Notifie le parent du mode sombre lors du montage si déjà activé
     onThemeChange(savedTheme === "dark");
   }, [onThemeChange]);
 
@@ -30,8 +29,6 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ onThemeChange }) => {
         document.body.classList.remove("dark-mode");
         localStorage.setItem("theme", "light");
       }
-
-      // Notifie le parent du changement de thème
       onThemeChange(newMode);
       return newMode;
     });

@@ -9,7 +9,6 @@ const skills = [
   { name: "CSS/SASS", level: 85 },
   { name: "TypeScript", level: 75 },
   { name: "Git", level: 80 },
-  // Ajoutez d'autres compétences...
 ];
 
 const SkillsSection: React.FC = () => {

@@ -4,7 +4,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import "./styles/index.scss"; // Changed from index.css to index.scss
+import "./styles/index.scss";
 
 const App: React.FC = () => {
   return (
